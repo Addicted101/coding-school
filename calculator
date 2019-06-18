@@ -1,3 +1,12 @@
+##Build a calculator that does the following:
+#Has the user choose whether they want to add/multiply/subtract or divide
+#Prompts the user to enter two numbers
+#Prints the result
+
+#Tip: The inputs will likely be taken in as strings, so casting may be required
+#Cast to an integer ex: int("2")
+#Cast to a string ex: str(2)
+
 print("AMAZING CALCULATOR")
 print("1")
 print("2")
