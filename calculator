@@ -16,3 +16,4 @@ print("/")
 first_number = input ("write a number 0-9")
 if first_number == 0:
   type_of_equation = input ()
+  
