@@ -8,7 +8,7 @@
 #Cast to a string ex: str(2)
 
 print("AMAZING CALCULATOR")
-first_number = input ("write a number")
+first_number = input ("write a number \n")
 print("1")
 print("2")
 print("3")
@@ -20,11 +20,28 @@ print("8")
 print("9")
 print("0")
 if first_number == 0:
-  type_of_equation = input ("write a mathematical symbol listed below \n + \n - \n * \n / \n ^")
+  operation = input ("write a mathematical symbol listed below \n + \n - \n * \n / \n ^ \n")
 else:
-  type_of_equation = input ("write a mathematical symbol listed below \n + \n - \n * \n / \n ^")
-if type_of_equation == ^:
-  second_number = input ("write a number")
+  operation = input ("write a mathematical symbol listed below \n + \n - \n * \n / \n ^ \n")
+if operation == "/":
+  second_number = input ("write a number \n")
 else: 
-  second_number = input ("write a number")
-print(first_number + type_of_equation + second_number)
+  second_number = input ("write a number \n")
+
+print(str(first_number) + operation + str(second_number))
+
+
+if operation == "+":
+  print(float(first_number)+float(second_number))
+
+if operation == "-":
+  print(float(first_number)-float(second_number))
+
+if operation == "*":
+  print(float(first_number)*float(second_number))
+
+if operation == "/":
+  print(float(first_number)/float(second_number))
+
+if operation == "^":
+  print(float(first_number)**float(second_number))
