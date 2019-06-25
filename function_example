@@ -1,0 +1,15 @@
+#Difference between a function, ex1 that returns, and ex2, that prints
+def ex1 (x,y):
+  return (x + y)
+
+def ex2 (x,y):
+  print(x + y)
+
+print("l = ex1(2,4):\n")
+l = ex1(2,4)
+print("k = ex2(1,3):\n")
+k = ex2(1,3)
+print("print(l):\n")
+print(l)
+print("print(k):\n")
+print (k)
