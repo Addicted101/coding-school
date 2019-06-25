@@ -1,0 +1,70 @@
+##Create functions for addition, subtraction, multiplication, division, exponentiation
+
+
+#returns the sum of two numbers
+def addition (first_number, second_number):
+  return(first_number + second_number)
+#j=addition(2,6)
+#print(j)
+
+##returns the difference of two numbers
+def subtraction (first_number, second_number):
+  return(first_number - second_number)
+
+#returns the product of two numbers
+def multiplication (first_number, second_number):
+  return(first_number * second_number)
+
+#returns the quotient of two numbers
+def division (first_number, second_number):
+  return(first_number / second_number)
+
+#returns the power of a first number to a second number
+def exponentiation (first_number, second_number):
+  return(first_number ** second_number)
+
+
+
+
+print("AMAZING CALCULATOR")
+first_number = input ("write a number \n")
+print("1")
+print("2")
+print("3")
+print("4")
+print("5")
+print("6")
+print("7")
+print("8")
+print("9")
+print("0")
+if first_number == 0:
+  operation = input ("write a mathematical symbol listed below \n + \n - \n * \n / \n ^ \n")
+else:
+  operation = input ("write a mathematical symbol listed below \n + \n - \n * \n / \n ^ \n")
+if operation == "/":
+  second_number = input ("write a number \n")
+else: 
+  second_number = input ("write a number \n")
+
+print(str(first_number) + operation + str(second_number))
+
+
+if operation == "+":
+  j=addition(float(first_number), float(second_number))
+    
+
+print (j)
+  
+
+if operation == "-":
+  print(float(first_number)-float(second_number))
+
+if operation == "*":
+  print(float(first_number)*float(second_number))
+
+if operation == "/":
+  print(float(first_number)/float(second_number))
+
+if operation == "^":
+  print(float(first_number)**float(second_number))
