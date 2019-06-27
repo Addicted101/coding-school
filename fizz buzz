@@ -1,0 +1,19 @@
+fizz_buzz = 0
+while fizz_buzz < 100:
+  fizz_buzz= int(fizz_buzz) + 1
+  fifteen = int(fizz_buzz) /15
+  fifteen_rounded = round(fifteen,0)
+  if fifteen_rounded == fifteen:
+    print("fizz buzz")
+  else:
+    three = int(fizz_buzz) / 3
+    three_rounded = round(three,0)
+    if three_rounded == three:
+      print("fizz")
+    else:
+      five = int(fizz_buzz) / 5
+      five_rounded = round(five,0)
+      if five_rounded == five:
+        print("buzz")
+      else:
+        print (fizz_buzz)
