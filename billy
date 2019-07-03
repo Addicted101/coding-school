@@ -1,0 +1,70 @@
+### TCS
+
+#Create a class called Shape that has
+#Attributes for the height, width, and number of sides the shape has -- these will be taken in as arguments in the constructor
+#Additionally, an area / volume attribute, calculated in the constructor
+#Functions to both change and see an instance of a shape's attributes
+
+class Shape():
+  def __init__(self, shape_name, height, width, length, number_of_sides, number_of_vertexes)
+    self.shape_name = shape_name
+    self.height = height
+    self.width = width
+    self.length = length
+    self.number_of_sides
+    self.number_of_vertexes = number_of_vertexes
+  def line_implant_surgery(self):
+    self.number_of_sides = self.number_of_sides + 1
+    print(self.shape_name + "has gotten a successful line implant surgery and now has" + self.number_of_sides + "sides")
+  def dimentional_transporter(self):
+    self.number_of_vertexes = self.number_of_vertexes + number_of_sides
+    self.length = self.length + 1
+    self.width = self.width +1
+    print(self.shape_name + "has gone through their homemade dimentional transporter and is now a multi dimentional being and now has" + self.number_of_vertexes +"vertexes")
+
+
+#main function
+
+shape1 = Shape("Billy",1,0,0,1,4)
+if length = 0:
+  length = length + 1
+print("this shape's name is" + shape_name + ",He is" + height "unit(s) tall, he has a width of:" + width + "unit(s) wide and is" + length + "units long. he has" + number_of_sides +"sides and has" + number_of_vertexes + "vertexes. and finally has an area/volume of"+ height*width*length)
+length = length - 1
+
+
+'''
+class Car():
+  def __init__(self, make, model, year):
+    self.make = make
+    self.model = model
+    self.year = year
+    self.fuelcapacity = 15
+    self.fuel = 15
+  def drive(self):
+    self.fuel = self.fuel - 1
+    print(self.make + " is driving, and fuel level is now " + str(self.fuel))
+  def fillup(self):
+    self.fuel = self.fuelcapacity
+    print(self.make + " is now full at " + str(self.fuelcapacity) + " gallons")
+  def fill (self,x):
+    x = int(x)
+    if (self.fuel + x < self.fuelcapacity):
+      self.fuel += x
+      print(self.make + " now has " + str(self.fuel) + " gallons left.")
+    elif (self.fuel + x >= self.fuelcapacity):
+      self.fuel = self.fuelcapacity
+      print(self.make + " is now full at " + str(self.fuelcapacity) + " gallons")
+
+
+##Main Function
+car1 = Car("Kia", "Optima", "2014")
+#print(car1.fuel)
+car2 = Car("Toyota", "Truck Thing", "1996")
+#print(car2.fuel)
+
+car1.drive()
+car1.drive()
+car1.fill(1)
+car1.fill(27)
+
+'''
