@@ -6,30 +6,44 @@
 #Functions to both change and see an instance of a shape's attributes
 
 class Shape():
-  def __init__(self, shape_name, height, width, length, number_of_sides, number_of_vertexes)
+  def __init__(self, shape_name, height, width, length, number_of_sides, number_of_vertexes):
     self.shape_name = shape_name
     self.height = height
     self.width = width
     self.length = length
-    self.number_of_sides
+    self.number_of_sides = number_of_sides
     self.number_of_vertexes = number_of_vertexes
-  def line_implant_surgery(self):
-    self.number_of_sides = self.number_of_sides + 1
-    print(self.shape_name + "has gotten a successful line implant surgery and now has" + self.number_of_sides + "sides")
+  def line_implant_surgery_height(self):
+    if self.width > 0:
+      self.number_of_sides = self.number_of_sides + 1
+    self.height = self.height + 1
+    print(str(self.shape_name) + " has gotten a successful line implant surgery and now has " + str(self.number_of_sides) + " sides and is now "+ str(self.height) + " unit(s) tall")
   def dimentional_transporter(self):
-    self.number_of_vertexes = self.number_of_vertexes + number_of_sides
+    self.number_of_vertexes = self.number_of_vertexes + self.number_of_sides
     self.length = self.length + 1
     self.width = self.width +1
-    print(self.shape_name + "has gone through their homemade dimentional transporter and is now a multi dimentional being and now has" + self.number_of_vertexes +"vertexes")
+    print(str(self.shape_name) + " has gone through their homemade dimentional transporter and is now a multi dimentional being and now has " + str(self.number_of_vertexes)+" vertexes")
+
 
 
 #main function
 
-shape1 = Shape("Billy",1,0,0,1,4)
-if length = 0:
-  length = length + 1
-print("this shape's name is" + shape_name + ",He is" + height "unit(s) tall, he has a width of:" + width + "unit(s) wide and is" + length + "units long. he has" + number_of_sides +"sides and has" + number_of_vertexes + "vertexes. and finally has an area/volume of"+ height*width*length)
-length = length - 1
+shape1 = Shape("Billy", 1,0,0,1,0)
+
+print("This shape's name is " + str(shape1.shape_name) + ", He is " + str(shape1.height) + " unit(s) tall, he has a width of: " + str(shape1.width) + " unit(s) and is " + str(shape1.length) + " unit(s) long. he has " + str(shape1.number_of_sides) + " sides and has " + str(shape1.number_of_vertexes))
+if shape1.width == 0 and shape1.length == 0:
+  print(" vertexes. and finally has an area/volume of " + str(shape1.height))
+else:
+  if shape1.length == 0:
+    print(" vertexes. and finally has an area/volume of " + str(shape1.height * shape1.width))
+  else:
+    if shape1.width == 0:
+      print(" vertexes. and finally has an area/volume of " + str(shape1.height * shape1.length))
+    else:
+      print(" vertexes. and finally has an area/volume of " + str(shape1.height * shape1.width * shape1.length))
+
+      
+
 
 
 '''
