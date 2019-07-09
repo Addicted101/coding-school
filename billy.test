@@ -1,0 +1,109 @@
+### TCS
+#Create a class called Shape that has
+#Attributes for the height, width, and number of sides the shape has -- these will be taken in as arguments in the constructor
+#Additionally, an area / volume attribute, calculated in the constructor
+#Functions to both change and see an instance of a shape's attributes
+
+
+###COMMON CLASS PRACTICE: "Getters and setters"
+  #Functions that can change or allow user to view certain attributes of an instance of a class
+#GET:
+  #Returns the attribute in question. EX:
+  #def get_Height(self):
+    #return self.height
+#SET:
+  #Changes the attribute question. EX:
+  #def set_Height(self,x):
+    #self.height = x
+
+#Functions to do the following
+#Allow user to change the height, length, or width
+#Allow user to change the number of verticies (2D or 3D)
+#Allow user to change the number of sides (1, 3, or 4)
+#You may assume the following:
+  #If shape is 2D: width is always zero
+  #Shape can only have 1, 3, or 4 edges
+  #All circles are perfect circles
+  #All triangles are right triangles
+
+#Should print back the shape's type of shape it is (2D/3D circle/triangle/rectangle, its new dimensions (height/length if 2D, height/length/widht if 3D), and its (updated) area (remember area changes depending on shape type)
+#
+
+
+
+class Shape():
+  def __init__(self, shape_name, height, width, length, number_of_sides, number_of_vertexes):
+    self.shape_name = shape_name
+    self.height = height
+    self.width = width
+    self.length = length
+    self.number_of_sides = number_of_sides
+    self.number_of_vertexes = number_of_vertexes
+  def line_implant_surgery(self):
+    if self.width > 0:
+      self.number_of_sides = self.number_of_sides + 1
+    self.height= self.height + 1
+    self.length = self.length + 1
+    self.width = self.width + 1
+    print(str(self.shape_name) + " has gotten a successful line implant surgery and now has " + str(self.number_of_sides) + " sides and is now "+ str(self.height) + " unit(s) tall")
+  def set_height(self,x):
+    self.height = x
+  def set_length(self,x):
+    self.length = x
+  def dimentional_transporter(self):
+    self.number_of_vertexes = self.number_of_vertexes + self.number_of_sides
+    self.length = self.length + 1
+    self.width = self.width + 1
+    print('                                                                          '+str(self.shape_name) + " has gone through their homemade dimentional transporter, left your family behind and is now a multi dimentional being and now has " + str(self.number_of_vertexes)+" vertexes")
+  def stats(self):
+    print("This shape's name is " + str(self.shape_name) + ", He is " + str(self.height) + " unit(s) tall, he has a width of: " + str(self.width) + " unit(s) and is " + str(self.length) + " unit(s) long. he has " + str(self.number_of_sides) + " sides and has " + str(self.number_of_vertexes))
+    if self.width == 0 and self.length == 0:
+      print(" vertexes. and finally has an area/volume of " + str(self.height))
+    else:
+      if self.length == 0:
+        print(" vertexes. and finally has an area/volume of " + str(self.height * self.width))
+      else:
+        if self.width == 0:
+          print(" vertexes. and finally has an area/volume of " + str(self.height * self.length))
+        else:
+          print(" vertexes. and finally has an area/volume of " + str(self.height * self.width * self.length))
+#main function
+
+name = input('enter a name ')
+shape1 = Shape(str(name),1,0,0,1,0)
+
+height_surgery = input('would you like to get a height surgery?')
+if height_surgery == 'yes':
+  height_surgery_II = input('how tall would you like to be?')
+  shape1.set_height(height_surgery_II)
+  shape1.stats()
+  length_surgery = input('your body is now not proportional, would you like to get a length addition surgery?')
+  if length_surgery == 'yes':
+    length_surgery_II = input, ('what would you like your length to be?')
+    shape1.set_length(length_surgery_II)
+    shape1.stats()
+
+'''
+name = input('enter a name ')
+shape1 = Shape(str(name),1,0,0,1,0)
+shape1.stats()
+dimention_transport = input('                                                                          you are born into a one dimentional world and are now twelve years old, your family is good but you have always wanted more, so one day you decide to create a multi dimentional transporter without telling anyone, do you want to go through it knowing you might die? answer yes or no ')
+if dimention_transport == 'yes':
+  shape1.dimentional_transporter()
+  print('Good Job! you did not die!')
+  surgery = input('you are now in a three dimensional universe, (there was a problem with your dimensional transporter that made you skip the 2nd dimension) but you are increadibly small still because your dimensions are 1*1*1 and it is increadibly likely you will be stepped on, so... you have the option of getting a dimension enlargement surgery do you want to proceed with the surgery?')
+  if surgery == 'yes':
+    shape1.line_implant_surgery()
+    print('I am feeling a bit lazy so I kinda need to kill you off soooooooo...')
+    print('    <`=,=,~---0^^^^0')
+    print(' you have died of dysentery from the surgery one week later')
+    shape1.stats()
+  else: 
+    print('I know you picked yes first(*boom broke the fourth wall*), your not getting out of this so you ate an infected potato aaaaaannnnndddddd')
+    print('    <`=,=,~---0^^^^0')
+    print(' you have died of dysentery')
+    shape1.stats()
+else:
+  print('                                                                          you lead a peaceful life, get married, have kids, and die peacefully not knowing there is a multi dimensional universe and die of cholera.')
+  shape1.stats()
+'''
