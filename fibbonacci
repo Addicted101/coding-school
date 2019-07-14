@@ -1,0 +1,44 @@
+fibbonacci = input("input a number to see if it is in the fibbonacci sequence")
+previous = 1
+current = 1
+current2 = 1
+previous2 = 1
+previous3 = 1
+oneup = 1
+onedown = 1
+upordown =1
+while current < int(fibbonacci) and int(fibbonacci) > 1:
+  current2 = int(previous) + int(current)
+  previous3 = previous2 - 1
+  previous3 = previous3 + 1
+  previous2 = previous - 1
+  previous2 = previous2 + 1
+  previous = current - 1
+  previous = previous + 1
+  current = current2 - 1
+  current = current + 1
+if int(fibbonacci) == int(current):
+  current = current + 1
+  print(str(fibbonacci) + " is a fibbonacci number")
+else:
+  if int(fibbonacci) < 0:
+    print (str(fibbonacci) + "is not a fibbonacci number")
+    print ("the closest fibbonacci number is 0")
+  else:
+    if int(fibbonacci) == 1:
+      print (str(fibbonacci) + " is a fibbonacci number")
+    else:
+      if int(fibbonacci) == 0:
+        print (str(fibbonacci) + " is a fibbonacci number")
+      else:
+        if int(fibbonacci) != int(current):
+          oneup = int(previous) + int(previous2)
+          onedown = int(previous2) + int(previous3)
+          print(onedown)
+          upordown = int(onedown) - int(oneup)
+        if int(upordown) > 0:
+          print (str(fibbonacci) + "is not a fibbonacci number")
+          print ("the closest fibbonacci number is" + str(oneup))
+        else:
+          print (str(fibbonacci) + "is not a fibbonacci number")
+          print ("the closest fibbonacci number is" + str(onedown))
