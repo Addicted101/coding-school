@@ -6,7 +6,8 @@ previous2 = 1
 previous3 = 1
 oneup = 1
 onedown = 1
-upordown =1
+up = 1
+down = 1
 while current < int(fibbonacci) and int(fibbonacci) > 1:
   current2 = int(previous) + int(current)
   previous3 = previous2 - 1
@@ -34,11 +35,11 @@ else:
         if int(fibbonacci) != int(current):
           oneup = int(previous) + int(previous2)
           onedown = int(previous2) + int(previous3)
-          print(onedown)
-          upordown = int(onedown) - int(oneup)
-        if int(upordown) > 0:
-          print (str(fibbonacci) + "is not a fibbonacci number")
-          print ("the closest fibbonacci number is" + str(oneup))
-        else:
-          print (str(fibbonacci) + "is not a fibbonacci number")
-          print ("the closest fibbonacci number is" + str(onedown))
+          up = abs(int(fibbonacci) - int(oneup))
+          down = abs(int(fibbonacci) - int(onedown))
+          if int(up) > int(down):
+            print (str(fibbonacci) + "is not a fibbonacci number")
+            print ("the closest fibbonacci number is" + str(onedown))
+          else:
+            print (str(fibbonacci) + "is not a fibbonacci number")
+            print ("the closest fibbonacci number is" + str(oneup))
