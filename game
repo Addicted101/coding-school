@@ -1,0 +1,152 @@
+import random
+
+###COMMON CLASS PRACTICE: "Getters and setters"
+  #Functions that can change or allow user to view certain attributes of an instance of a class
+#GET:
+  #Returns the attribute in question. EX:
+  #def get_Height(self):
+    #return self.height
+#SET:
+  #Changes the attribute question. EX:
+  #def set_Height(self,x):
+    #self.height = x
+
+'''
+RANDOMNESS EXAMPLE
+x = random.uniform(0,10)
+
+if (x > 5):
+  Do something
+
+else (x <= 5):
+  Do something else
+
+
+class Car():
+  def __init__(self, name):
+    self.name = name
+    self.year = "1996"
+    self.model = "Default"
+  
+  def getName(self):
+    return self.name
+
+class Honda(Car):
+  def __init__(self, name):
+    super().__init__(name)
+    self.model = "Honda"
+  def getModel(self):
+    return self.model
+'''
+
+###Text Based Combat###
+
+#Creating different character classes for an RPG. An example would be warrior.
+#Create a template (or parent) Character class. This will have attributes of HP (health points), MP (magic points), ATK (attack), DEF (defense), and SPD (speed)
+#Create at least four child classes that are different specialties. A classic example is Warrior, Mage, Cleric, and Rogue.
+  #These should have all have differing stats as well as an additional ability
+
+#Program flow:
+#User will be greeted and prompted to choose from one of these classes. There should be a brief overview of each class before user needs to select one.
+#Then, the program will randomly generate an enemy of one of the classes and inform the user what opponent they will be facing. Combat will begin
+
+#Combat will be turn-based; whoever has the highest speed moves first. User (and enemy) will have the opporunity to attack, defend, or use a skill -- skills should use MP.
+  #The enemy's decision on what to do will be given as the code is developed
+#Whenever the enemy or the player has less than or 0 HP, the game should immediately end, telling the user the result, and asking if they'd like to play again.
+
+class template():
+  def __init__(self):
+    self.HP = 150
+    self.ATK = 50
+    self.CP = 35
+    self.SPD = 20
+    self.DEF = 1
+    self.FAN = 15
+    self.AMM = 7
+  def move(self):
+    distance = distance - self.SPD
+    dodge = random.uniform(0,100)
+    if dodge < self.SPD:
+      print("you dodged the attack")
+    class2.HP = class2.HP - (class1.ATK / class2
+    
+    
+
+class sproing(template):
+  def __init__(self):
+    super().__init__()
+    self.SPD = 50
+    self.DEF = 15
+
+class meme(template):
+  def __init__(self):
+    super().__init__()
+    self.ATK = 15
+    self.CP = 75
+    self.FAN = 75
+    self.SPD = 35
+    self.AMM = 14
+    self.DEF = 25
+class avtoboi(template):
+  def __init__(self):
+    super().__init__()
+    self.ATK = 135
+    self.CP = 10
+    self.SPD = 10
+    self.FAN = 60
+    self.AMM = 19
+    
+class tryhard(template):
+  def __init__(self):
+    super().__init__()
+    self.ATK = 135
+    self.FAN = 35
+    self.DEF = 15
+    self.AMM = 5
+##Main
+distance = 100
+attack =     
+dodge = random.uniform(0,100)
+if dodge <= class2.SPD:
+  print("you dodged the attack")
+else:
+  class2.HP = class2.HP - (class1.ATK / class2.DEF)
+choice = input("choose a class: sproing, meme, avtoboi, or tryhard. the sproing loadout is a speed based loadout capable of doing moderate damage, going extremily fast, low fanning level and is best at medium range. the meme loadout is a low damage loadout, that specializes in the art of rage manipulation this loadout exels at close range due to it's high conumable power and high fanning power. the avtoboi loadout is a tanky loadout. it specializes in medium range but can preform well in close range due to its high fanning level. the final loadout is the tryhard loadout. this loadout is based on long range and strategic positions, this can make it difficult to be hit by enemies.")
+
+if choice == "sproing":
+  class1 = sproing()
+elif choice == "meme":
+  class1 = meme()
+elif choice == "avtoboi":
+  class1 = avtoboi()
+elif choice == "tryhard"
+  class1 = tryhard()
+
+enemy_choice = input("choose an enemy class: sproing, meme, avtoboi, or tryhard. the sproing loadout is a speed based loadout capable of doing moderate damage, going extremily fast, low fanning level and is best at medium range. the meme loadout is a low damage loadout, that specializes in the art of rage manipulation this loadout exels at close range due to it's high conumable power and high fanning power. the avtoboi loadout is a tanky loadout. it specializes in medium range but can preform well in close range due to its high fanning level. the final loadout is the tryhard loadout. this loadout is based on long range and strategic positions, this can make it difficult to be hit by enemies.")
+
+if enemy_choice == "sproing":
+  class2 = sproing()
+elif enemy_choice == "meme":
+  class2 = meme()
+elif enemy_choice == "avtoboi":
+  class2 = avtoboi()
+elif enemy_choice == "tryhard"
+print("you are a lonely hunter in the bayous of Luisiana, hired to rid the area of the hell it has become. problem is there are others hired to do the same, so you must rid them aswell.") 
+print("your stats are:" + str(class1.HP) + "Hitpoints" + str(class1.ATK) + "Attack" + str(class1.CP) + "consumable power" + str(class1.SPD) + "Speed" + str(class1.DEF) + "defence" + str(class1.FAN) + "fanning power" + str(class1.AMM) + "Ammo capacity")
+
+print("your enemy is" + enemy_choice)
+print("their stats are:" + str(class2.HP) + "Hitpoints" + str(class2.ATK) + "Attack" + str(class2.CP) + "consumable power" + str(class2.SPD) + "Speed" + str(class2.DEF) + "defence" + str(class2.FAN) + "fanning power" + str(class2.AMM) + "Ammo capacity")
+while class1.HP > 0 and class2.HP > 0
+choice = input ("what would you like to do? attack, use a consumable, fan, move towards enemy, heal, or reload (you need to reload every two shots.)")
+if choice = "attack":
+  attack
+elif choice = "consumable":
+  class2.HP = class2.HP - 100
+elif choice = "move":
+  distance = distance - 25
+  elif choice = "fan":
+    if distance < 26:
+      fann = random.uniform(0,100)
+      if fann < class1.FAN:
+        class2.HP = class2.HP - 150
+        
