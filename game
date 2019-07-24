@@ -60,23 +60,36 @@ class template():
     self.ATK = 50
     self.CP = 35
     self.SPD = 20
-    self.DEF = 1
+    self.DEF = 0.1
     self.FAN = 15
     self.AMM = 7
+    self.MAXHP = 150
+    self.MAXAMM = self.AMM
   def move(self):
     distance = distance - self.SPD
+  def attack(self):
     dodge = random.uniform(0,100)
     if dodge < self.SPD:
-      print("you dodged the attack")
-    class2.HP = class2.HP - (class1.ATK / class2
-    
+      print("your enemy dodged the attack")
+    else:
+      class2.HP = class2.HP - (class1.ATK -(class1.ATK * class2.DEF))
+  def SETHP(self, x):
+    if x + self.HP <= self.MAXHP:
+      self.HP = self.MAXHP
+    else:
+      self.HP = self.HP + x
+  def RELOAD(self,x):
+    if x + self.HP >= self.MAXAMM:
+      self.AMM = self.MAXAMM
+    else:
+      self.AMM = self.AMM
     
 
 class sproing(template):
   def __init__(self):
     super().__init__()
-    self.SPD = 50
-    self.DEF = 15
+    self.SPD = 65
+    self.DEF = 0.15
 
 class meme(template):
   def __init__(self):
@@ -86,7 +99,7 @@ class meme(template):
     self.FAN = 75
     self.SPD = 35
     self.AMM = 14
-    self.DEF = 25
+    self.DEF = 0.25
 class avtoboi(template):
   def __init__(self):
     super().__init__()
@@ -101,11 +114,12 @@ class tryhard(template):
     super().__init__()
     self.ATK = 135
     self.FAN = 35
-    self.DEF = 15
+    self.DEF = 0.15
     self.AMM = 5
 ##Main
 distance = 100
-attack =     
+consumable counter = 0
+big_heal_counter = 0
 dodge = random.uniform(0,100)
 if dodge <= class2.SPD:
   print("you dodged the attack")
@@ -137,16 +151,45 @@ print("your stats are:" + str(class1.HP) + "Hitpoints" + str(class1.ATK) + "Atta
 print("your enemy is" + enemy_choice)
 print("their stats are:" + str(class2.HP) + "Hitpoints" + str(class2.ATK) + "Attack" + str(class2.CP) + "consumable power" + str(class2.SPD) + "Speed" + str(class2.DEF) + "defence" + str(class2.FAN) + "fanning power" + str(class2.AMM) + "Ammo capacity")
 while class1.HP > 0 and class2.HP > 0
-choice = input ("what would you like to do? attack, use a consumable, fan, move towards enemy, heal, or reload (you need to reload every two shots.)")
+choice = input ("what would you like to do? attack, use a consumable (only able to use 1), fan, move towards enemy, small heal, big heal (only able to use 2), or reload")
 if choice = "attack":
-  attack
+  if class1.AMM < 0:
+    class1.attack()
+    class1.AMM = class1.AMM - 1
+  else:
+    print ("you hear an annoying clicking sound coming from your gun as you try to shoot. ")
 elif choice = "consumable":
-  class2.HP = class2.HP - 100
+  consumable = random.uniform(0,100)
+  if consumable_counter < 1:
+    if consumable < class1.CP
+      class2.DEF = class2.DEF / 1.1
+      class2.SPD = class2.SPD / 1.1
+      consumable_counter = consumable_counter + 1
+  else:
+    print("you have run out of consumables to use")
 elif choice = "move":
-  distance = distance - 25
-  elif choice = "fan":
-    if distance < 26:
-      fann = random.uniform(0,100)
-      if fann < class1.FAN:
-        class2.HP = class2.HP - 150
-        
+  move_distance = input("how far would you like to move (Maximum distance is 25)")
+  if move_distance < 25:
+    distance = distance - int(move_distance)
+  else:
+    distance = distance - 25
+elif choice = "fan":
+  fan_distance = random.uniform(0,100)
+  if distance < fan_distance:
+    fann = random.uniform(0,100)
+    if fann < class1.FAN:
+      class2.HP = class2.HP - 150
+    else:
+      print("you missed your fan try moving closer")
+  class1.AMM = 0
+elif choice = "small heal":
+  class1.SETHP(50)
+
+elif choice = "big heal":
+  if big_heal_counter < 2:
+    class1.SETHP(150)
+    big_heal_counter = big_heal_counter + 1
+  else:
+    print("you have run out of big heals")
+elif choice = "reload":
+  class1.RELOAD(class1.MAXAMM)
